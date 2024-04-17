@@ -8,8 +8,8 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/character" element={<CharacterList />}/>
-        <Route path="/character/:characterId" element={<Character />} />
+        <Route path="/" element={<CharacterList />}/>
+        <Route path="/:characterId" element={<Character />} />
       </Routes>
     </Router>
 

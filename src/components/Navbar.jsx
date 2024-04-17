@@ -6,7 +6,7 @@ const Navbar = () =>{
             <div className='container mx-auto flex justify-between items-center'>
             <ul className='flex  space-x-5'>
                 <li>
-                <Link to="/character"  className='text-white hover:text-gray-300'>Character</Link>
+                <Link to="/"  className='text-white hover:text-gray-300'>Character</Link>
                 </li>
                 <li>
                 <Link to="/search"  className='text-white hover:text-gray-300'>Search</Link>

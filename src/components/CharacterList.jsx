@@ -50,7 +50,7 @@ function CharacterList() {
                             <Link to={`/character/${character.id}`} state={character}>
                                 <button className="font-serif text-center bg-blue-700 mt-4 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg">View Character</button>
                             </Link>
-                                <button  onClick={()=> deleteCharacter(character.id)} className='font-serif text-center bg-blue-500 mt-6 mr-4 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg'>Delete Character</button>
+                                <button  onClick={()=> deleteCharacter(character.id)} className='font-serif text-center bg-red-500 mt-6 ml-4 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg'>Delete Character</button>
                             
                         </div>
                     ))}
