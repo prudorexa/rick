@@ -44,9 +44,9 @@ function CharacterList() {
 
                 <div className='grid grid-cols-3 gap-4 mx-20 mt-8'>
                     {filteredCharacters.map((character) => (
-                        <div key={character.id}>
-                            <h2 className='text-xl font-bold'>{character.name}</h2>
+                        <div className='border p-4' key={character.id}>
                             <img src={character.image} alt={character.name} />
+                            <h2 className='text-xl font-bold'>{character.name}</h2>
                             <Link to={`/character/${character.id}`} state={character}>
                                 <button className="font-serif text-center bg-blue-700 mt-4 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg">View Character</button>
                             </Link>
