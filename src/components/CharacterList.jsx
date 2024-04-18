@@ -15,6 +15,7 @@ function CharacterList() {
     const filteredCharacters = characters.filter(character =>
         character.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
+        
         const deleteCharacter = id => {
             fetch(`https://rickandmortyapi.com/api/character/${id}`, {
         method: `DELETE`
@@ -25,32 +26,32 @@ function CharacterList() {
 };
 
     return (
-            <div>
-                <h1 className='text-center font-bold text-red-500 text-xl'>List Of Characters</h1>
+            <div className=''>
+                <h1 className='text-center font-bold text-red-500 text-xl mb-3'>List Of Characters</h1>
                 <input
                     type="text"
-                    placeholder='Search...'
+                    placeholder='Search by name'
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"/>
+                    className="w-full px-5 py-4 ml=15 mr-10  border rounded-md border-red-500 "/>
 
 
 
                 {filteredCharacters.map((character) => (
                 <div key={character.id}>
-                    <Link to={`/characters/${character.id}`}></Link>
+                    <Link to={`/character/${character.id}`}></Link>
                 </div>
                 ))}
 
-                <div className='grid grid-cols-3 gap-4 mx-20 mt-8'>
+                <div className='grid grid-cols-1 sn:grid-cols-2 lg:grid-cols-3 gap-4 mx-20 mt-8 '>
                     {filteredCharacters.map((character) => (
                         <div className='border p-4' key={character.id}>
                             <img src={character.image} alt={character.name} />
                             <h2 className='text-xl font-bold'>{character.name}</h2>
                             <Link to={`/character/${character.id}`} state={character}>
-                                <button className="font-serif text-center bg-blue-700 mt-4 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg">View Character</button>
+                                <button className="font-serif text-center bg-gray-700 mt-7  text-gray-100 hover:text-gray-300 border border-gray-400 rounded-lg">View </button>
                             </Link>
-                                <button  onClick={()=> deleteCharacter(character.id)} className='font-serif text-center bg-red-500 mt-6 ml-4 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg'>Delete Character</button>
+                                <button  onClick={()=> deleteCharacter(character.id)} className='font-serif text-center bg-red-500 mt-6 ml-4 text-gray-100 hover:text-gray-300 border border-gray-300 '>Delete </button>
                             
                         </div>
                     ))}
