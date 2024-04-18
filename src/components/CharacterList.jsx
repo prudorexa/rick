@@ -46,12 +46,12 @@ function CharacterList() {
                         <div className='border p-4' key={character.id}>
                             <img src={character.image} alt={character.name} />
                             <h2 className='text-xl font-bold'>{character.name}</h2>
-                            <Link to={`/character${character.id}`} state={character}>
+                            {/* <Link to={`/character${character.id}`} state={character}>
                             <button className='hover:text-black-500  border border-bold rounded-lg hover:bg-gray-700 hover:text-white mt-2'>View Character</button>
-                        </Link>
-                            {/* <Link to={`/character/${character.id}`} state={character}>
+                        </Link> */}
+                            <Link to={`/character/${character.id}`} state={character}>
                                 <button className="font-serif text-center bg-gray-700 mt-7 p-3 px-10 text-gray-100 hover:text-gray-300 border border-gray-400 rounded-lg">View </button>
-                            </Link> */}
+                            </Link>
                                 <button  onClick={()=> deleteCharacter(character.id)} className='font-serif text-center bg-red-500 mt-6 ml-4 p-3 px-10 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg '>Delete </button>
                             
                         </div>
