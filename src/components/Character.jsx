@@ -1,14 +1,21 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+
 const Character = () => {
     const { state: character } = useLocation();
     console.log(character);
+
     return (
         <div className='max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden'>
-            <h1 className='text-2xl font-bold mb-2'>Character Details</h1>
-            <p className='text-gray-700'><strong>ID:</strong> {character.id}</p>
-            <p className='text-gray-700'><strong>Name:</strong> {character.name}</p>
-            <p className='text-gray-700'><strong>Status:</strong> {character.status}</p>
-            <img src={character.image} alt={character.title} className='w-full' />
+            <h1 className='text-3xl font-bold mb-1 text-center'>Character Details</h1>
+            <img src={character.image} alt={character.title} className='ml-20 ' />
+            <p className='text-gray-700 ml-20 mt-3'><strong>ID:</strong> {character.id}</p>
+            <p className='text-gray-700 ml-20'><strong>Name:</strong> {character.name}</p>
+            <p className='text-gray-700 ml-20'><strong>Status:</strong> {character.status}</p>
+            <p className='text-gray-700 ml-20'><strong>Species:</strong> {character.species}</p>
+            <p className='text-gray-700 ml-20'><strong>Gender:</strong> {character.gender}</p>
+            <Link to={`/`}>
+                <button className="font-serif text-center bg-gray-700 mt-7 ml-40 p-2 px-5 text-gray-100 hover:text-gray-300 border border-gray-400 rounded-lg">Back</button>
+            </Link>
         </div>
     );
 };

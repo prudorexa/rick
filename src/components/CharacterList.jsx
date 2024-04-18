@@ -33,7 +33,7 @@ function CharacterList() {
                     placeholder='Search by name'
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full px-5 py-3 ml=15 mr-10  border rounded-md border-red-500 "/>
+                    className="w-60 px-5 py-3 ml-10  border rounded-md border-red-500 "/>
 
                 {filteredCharacters.map((character) => (
                 <div key={character.id}>
@@ -46,11 +46,8 @@ function CharacterList() {
                         <div className='border p-4' key={character.id}>
                             <img src={character.image} alt={character.name} />
                             <h2 className='text-xl font-bold'>{character.name}</h2>
-                            {/* <Link to={`/character${character.id}`} state={character}>
-                            <button className='hover:text-black-500  border border-bold rounded-lg hover:bg-gray-700 hover:text-white mt-2'>View Character</button>
-                        </Link> */}
-                            <Link to={`/character/${character.id}`} state={character}>
-                                <button className="font-serif text-center bg-gray-700 mt-7 p-3 px-10 text-gray-100 hover:text-gray-300 border border-gray-400 rounded-lg">View </button>
+                            <Link to={`/character${character.id}`} state={character}>
+                                <button className="font-serif text-center  bg-gray-700 mt-7 p-3 px-10 text-gray-100 hover:text-gray-300 border border-gray-400 rounded-lg">View </button>
                             </Link>
                                 <button  onClick={()=> deleteCharacter(character.id)} className='font-serif text-center bg-red-500 mt-6 ml-4 p-3 px-10 text-gray-100 hover:text-gray-300 border border-gray-300 rounded-lg '>Delete </button>
                             
