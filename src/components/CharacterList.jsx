@@ -26,7 +26,7 @@ function CharacterList() {
 };
 
     return (
-            <div className=''>
+            <div>
                 <h1 className='text-center font-bold text-red-500 text-xl mb-3'>List Of Characters</h1>
                 <input
                     type="text"
